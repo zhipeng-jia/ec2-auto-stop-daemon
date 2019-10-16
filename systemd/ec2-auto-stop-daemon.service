@@ -1,0 +1,16 @@
+[Unit]
+Description=Auto stop idle EC2 machines
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+ExecStart=/usr/bin/env ec2-auto-stop-daemon --config-file /etc/ec2-auto-stop-daemon/config.json
+SyslogIdentifier=ec2-auto-stop-daemon
+Restart=always
+TimeoutStopSec=60
+Type=simple
+KillMode=process
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

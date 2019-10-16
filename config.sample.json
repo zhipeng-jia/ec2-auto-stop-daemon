@@ -1,0 +1,13 @@
+{
+    "aws_cli_path": "/snap/bin/aws",
+    "aws_settings": {
+        "region": "<AWS_REGION>",
+        "access_key_id": "<AWS_ACCESS_KEY_ID>",
+        "secret_access_key": "<AWS_SECRET_ACCESS_KEY>"
+    },
+    "max_idle_minutes": 10,
+    "hibernate": true,
+    "watch_paths": [
+        "/mnt/efs/workspace"
+    ]
+}
